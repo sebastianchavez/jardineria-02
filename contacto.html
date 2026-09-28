@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contacta a Jardines Aurora: formulario, WhatsApp, teléfono, email y mapa. Estamos en Av. Providencia 1245, Santiago." />
+  <title>Contacto · Jardines Aurora</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/minty/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌱%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-icon"><i class="bi bi-flower2"></i></span>
+        <span>
+          Jardines Aurora
+          <small>Donde la naturaleza despierta</small>
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item ms-lg-2"><a class="nav-link btn-cta-nav" href="contacto.html">Cotizar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="reveal">Hablemos <span class="text-primary">de tu jardín</span></h1>
+      <nav aria-label="breadcrumb" class="reveal reveal-delay-1">
+        <ol class="breadcrumb breadcrumb-custom">
+          <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-door me-1"></i>Inicio</a></li>
+          <li class="breadcrumb-item active">Contacto</li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== WHATSAPP BANNER ===== -->
+  <section class="py-3" style="background:linear-gradient(135deg, #d4edda, #c3e6cb);">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-center flex-wrap gap-2 text-center">
+        <i class="bi bi-whatsapp text-success fs-5"></i>
+        <strong class="text-success">¿Necesitas respuesta inmediata?</strong>
+        <span class="text-dark">Escríbenos directo al WhatsApp</span>
+        <a href="https://wa.me/56987651234" target="_blank" class="btn btn-success btn-sm rounded-pill px-3">
+          <i class="bi bi-whatsapp me-1"></i>+56 9 8765 1234
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FORMULARIO + INFO ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Form -->
+        <div class="col-lg-7 reveal">
+          <div class="form-card">
+            <h2 class="mb-2">Solicita tu cotización gratis</h2>
+            <p class="text-muted mb-4">Completa el formulario y te responderemos en menos de 24 horas hábiles.</p>
+            <form id="contactForm" class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="nombre">Nombre completo *</label>
+                  <input type="text" class="form-control" id="nombre" required minlength="3" />
+                  <div class="invalid-feedback">Por favor ingresa tu nombre completo.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="email">Email *</label>
+                  <input type="email" class="form-control" id="email" required />
+                  <div class="invalid-feedback">Necesitamos un email válido para contactarte.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="telefono">Teléfono *</label>
+                  <input type="tel" class="form-control" id="telefono" pattern="[0-9+\s\-\(\)]{10,}" required />
+                  <div class="invalid-feedback">Ingresa un teléfono válido (mínimo 10 dígitos).</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="comuna">Comuna *</label>
+                  <input type="text" class="form-control" id="comuna" required />
+                  <div class="invalid-feedback">¿En qué comuna necesitas el servicio?</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="servicio">Servicio de interés *</label>
+                  <select class="form-select" id="servicio" required>
+                    <option value="">Selecciona un servicio</option>
+                    <option>Diseño paisajístico</option>
+                    <option>Mantención mensual</option>
+                    <option>Poda y tala</option>
+                    <option>Riego automático</option>
+                    <option>Césped y siembra</option>
+                    <option>Huerto orgánico</option>
+                    <option>Iluminación</option>
+                    <option>Control de plagas</option>
+                    <option>Otro / No estoy seguro</option>
+                  </select>
+                  <div class="invalid-feedback">Selecciona el servicio que necesitas.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="fecha">Fecha preferida para visita</label>
+                  <input type="date" class="form-control" id="fecha" />
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="mensaje">Mensaje *</label>
+                  <textarea class="form-control" id="mensaje" rows="4" required minlength="20"
+                    placeholder="Cuéntanos sobre tu espacio, ideas, urgencia o cualquier detalle relevante..."></textarea>
+                  <div class="invalid-feedback">Describe brevemente tu proyecto (mínimo 20 caracteres).</div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="acepto" required />
+                    <label class="form-check-label small" for="acepto">
+                      Acepto la <a href="privacidad.html" target="_blank">política de privacidad</a> y autorizo el contacto comercial.
+                    </label>
+                    <div class="invalid-feedback">Debes aceptar la política para continuar.</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary btn-lg px-4">
+                    <i class="bi bi-send me-2"></i>Enviar solicitud
+                  </button>
+                  <p class="text-muted small mt-2 mb-0">
+                    <i class="bi bi-shield-check me-1"></i>Tus datos están protegidos y nunca los compartiremos.
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Info lateral -->
+        <div class="col-lg-5 reveal reveal-delay-1">
+          <div class="bg-soft rounded-4 p-4 mb-4">
+            <h5 class="mb-3"><i class="bi bi-geo-alt-fill text-primary me-2"></i>Visítanos</h5>
+            <p class="text-muted mb-3">Av. Providencia 1245, Of. 602<br>Providencia, Santiago, Chile</p>
+
+            <h5 class="mb-3 mt-4"><i class="bi bi-telephone-fill text-primary me-2"></i>Llámanos</h5>
+            <p class="mb-1"><a href="tel:+56223456789" class="text-decoration-none"><strong>+56 2 2345 6789</strong></a></p>
+            <p class="mb-3"><a href="https://wa.me/56987651234" target="_blank" class="text-decoration-none"><strong>+56 9 8765 1234</strong> <small class="text-success">(WhatsApp)</small></a></p>
+
+            <h5 class="mb-3 mt-4"><i class="bi bi-envelope-fill text-primary me-2"></i>Escríbenos</h5>
+            <p class="mb-3"><a href="mailto:contacto@jardinesaurora.cl" class="text-decoration-none">contacto@jardinesaurora.cl</a></p>
+
+            <h5 class="mb-3 mt-4"><i class="bi bi-clock-fill text-primary me-2"></i>Horarios</h5>
+            <ul class="list-unstyled text-muted small mb-0">
+              <li class="d-flex justify-content-between py-1"><span>Lunes a Viernes</span><strong class="text-dark">08:00 — 18:30</strong></li>
+              <li class="d-flex justify-content-between py-1"><span>Sábado</span><strong class="text-dark">09:00 — 14:00</strong></li>
+              <li class="d-flex justify-content-between py-1"><span>Domingo</span><strong class="text-dark">Cerrado</strong></li>
+            </ul>
+          </div>
+
+          <div class="text-center">
+            <h5 class="mb-3">Síguenos</h5>
+            <div class="d-flex gap-2 justify-content-center">
+              <a href="#" class="btn btn-outline-primary rounded-circle" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="btn btn-outline-primary rounded-circle" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="btn btn-outline-primary rounded-circle" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+              <a href="https://wa.me/56987651234" target="_blank" class="btn btn-outline-success rounded-circle" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAPA ===== -->
+  <section class="py-0">
+    <div class="container-fluid p-0">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.87654321!2d-70.6324!3d-33.4253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a0a0a0a0a0%3A0x0!2sProvidencia%2C%20Santiago!5e0!3m2!1ses-419!2scl!4v1700000000000"
+        width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="Ubicación Jardines Aurora"></iframe>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section bg-soft">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="section-eyebrow mb-3">Resolvemos tus dudas</span>
+        <h2 class="mt-3">Preguntas frecuentes</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-9 reveal">
+          <div class="accordion" id="contactFaqAccordion"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SUCCESS MODAL ===== -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4">
+        <div class="modal-body">
+          <div class="modal-success-icon"><i class="bi bi-check-lg"></i></div>
+          <h3 class="mb-2">¡Mensaje enviado!</h3>
+          <p class="text-muted">Gracias por contactarnos. Te responderemos en menos de 24 horas hábiles.</p>
+          <button type="button" class="btn btn-primary mt-2" data-bs-dismiss="modal">Entendido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <span class="brand-icon"><i class="bi bi-flower2"></i></span>
+            <span class="brand-name">Jardines Aurora</span>
+          </div>
+          <p>Diseño, construcción y mantención de jardines sustentables en Santiago y la Región Metropolitana. Comprometidos con la belleza natural.</p>
+          <div class="social-links mt-3">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5>Navegación</h5>
+          <ul>
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Inicio</a></li>
+            <li><a href="sobre-nosotros.html"><i class="bi bi-chevron-right"></i> Nosotros</a></li>
+            <li><a href="servicios.html"><i class="bi bi-chevron-right"></i> Servicios</a></li>
+            <li><a href="galeria.html"><i class="bi bi-chevron-right"></i> Galería</a></li>
+            <li><a href="precios.html"><i class="bi bi-chevron-right"></i> Precios</a></li>
+            <li><a href="contacto.html"><i class="bi bi-chevron-right"></i> Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5>Horarios</h5>
+          <ul>
+            <li><strong>Lun-Vie:</strong> 08:00 — 18:30</li>
+            <li><strong>Sábados:</strong> 09:00 — 14:00</li>
+            <li><strong>Domingo:</strong> Cerrado (sólo emergencias)</li>
+            <li class="mt-2"><a href="tel:+56223456789"><i class="bi bi-telephone-fill"></i> +56 2 2345 6789</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacidad.html"><i class="bi bi-shield-lock"></i> Políticas de privacidad</a></li>
+            <li><a href="terminos.html"><i class="bi bi-file-text"></i> Términos y condiciones</a></li>
+          </ul>
+          <h5 class="mt-3">Ubicación</h5>
+          <p class="small mb-0">Av. Providencia 1245, Of. 602<br>Providencia, Santiago, Chile</p>
+        </div>
+      </div>
+      <hr />
+      <div class="copyright">
+        © <span id="currentYear"></span> Jardines Aurora SpA · Hecho con <i class="bi bi-heart-fill text-danger"></i> y muchas plantas 🌱
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="backToTop" class="btn btn-primary rounded-circle position-fixed" style="bottom:24px;right:90px;width:50px;height:50px;z-index:1030;" aria-label="Volver arriba">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <a href="https://wa.me/56987651234" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
