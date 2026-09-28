@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Galería de proyectos de Jardines Aurora: 12 jardines diseñados, mantenidos e iluminados en Santiago. Inspírate con nuestro portafolio." />
+  <title>Galería · Jardines Aurora</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/minty/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌱%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-icon"><i class="bi bi-flower2"></i></span>
+        <span>
+          Jardines Aurora
+          <small>Donde la naturaleza despierta</small>
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item ms-lg-2"><a class="nav-link btn-cta-nav" href="contacto.html">Cotizar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="reveal">Nuestros <span class="text-primary">proyectos</span></h1>
+      <nav aria-label="breadcrumb" class="reveal reveal-delay-1">
+        <ol class="breadcrumb breadcrumb-custom">
+          <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-door me-1"></i>Inicio</a></li>
+          <li class="breadcrumb-item active">Galería</li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== GALERÍA ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="section-eyebrow mb-3">Portafolio</span>
+        <h2 class="mt-3">Jardines que hablan por sí solos</h2>
+        <p>Una selección de 12 proyectos realizados en Santiago. Filtra por categoría.</p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="gallery-filters reveal" id="galleryFilters"></div>
+
+      <!-- Grid -->
+      <div class="row g-4" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-banner reveal">
+    <div class="container position-relative">
+      <h2>¿Tu jardín podría ser el próximo?</h2>
+      <p class="lead">Conversemos sobre tu proyecto. La primera visita es gratis y sin compromiso.</p>
+      <a href="contacto.html" class="btn btn-lg">
+        <i class="bi bi-flower3 me-2"></i>Iniciar mi proyecto
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== LIGHTBOX MODAL ===== -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0 text-center">
+          <img src="" alt="" class="lightbox-img" />
+          <div class="lightbox-caption">
+            <h5 class="lightbox-title mb-1" style="color:#fff;font-family:'Playfair Display',serif;"></h5>
+            <p class="lightbox-desc mb-0 small" style="color:rgba(255,255,255,.85);"></p>
+          </div>
+        </div>
+        <div class="modal-footer border-0 justify-content-center pb-4">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar <kbd class="ms-2">ESC</kbd></button>
+          <small class="text-white-50 ms-3 align-self-center">
+            <i class="bi bi-keyboard me-1"></i>← → para navegar
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <span class="brand-icon"><i class="bi bi-flower2"></i></span>
+            <span class="brand-name">Jardines Aurora</span>
+          </div>
+          <p>Diseño, construcción y mantención de jardines sustentables en Santiago y la Región Metropolitana. Comprometidos con la belleza natural.</p>
+          <div class="social-links mt-3">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5>Navegación</h5>
+          <ul>
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Inicio</a></li>
+            <li><a href="sobre-nosotros.html"><i class="bi bi-chevron-right"></i> Nosotros</a></li>
+            <li><a href="servicios.html"><i class="bi bi-chevron-right"></i> Servicios</a></li>
+            <li><a href="galeria.html"><i class="bi bi-chevron-right"></i> Galería</a></li>
+            <li><a href="precios.html"><i class="bi bi-chevron-right"></i> Precios</a></li>
+            <li><a href="contacto.html"><i class="bi bi-chevron-right"></i> Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5>Horarios</h5>
+          <ul>
+            <li><strong>Lun-Vie:</strong> 08:00 — 18:30</li>
+            <li><strong>Sábados:</strong> 09:00 — 14:00</li>
+            <li><strong>Domingo:</strong> Cerrado (sólo emergencias)</li>
+            <li class="mt-2"><a href="tel:+56223456789"><i class="bi bi-telephone-fill"></i> +56 2 2345 6789</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacidad.html"><i class="bi bi-shield-lock"></i> Políticas de privacidad</a></li>
+            <li><a href="terminos.html"><i class="bi bi-file-text"></i> Términos y condiciones</a></li>
+          </ul>
+          <h5 class="mt-3">Ubicación</h5>
+          <p class="small mb-0">Av. Providencia 1245, Of. 602<br>Providencia, Santiago, Chile</p>
+        </div>
+      </div>
+      <hr />
+      <div class="copyright">
+        © <span id="currentYear"></span> Jardines Aurora SpA · Hecho con <i class="bi bi-heart-fill text-danger"></i> y muchas plantas 🌱
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="backToTop" class="btn btn-primary rounded-circle position-fixed" style="bottom:24px;right:90px;width:50px;height:50px;z-index:1030;" aria-label="Volver arriba">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <a href="https://wa.me/56987651234" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
